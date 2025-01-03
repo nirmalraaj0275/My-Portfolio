@@ -29,7 +29,7 @@ export default function Home() {
 				<Projects2 />
 				<Resume1 />
 				<Skills2 />
-				<Brands1 />
+				{/* <Brands1 /> */}
 				{/* <Testimonials1 /> */}
 				<Blog2 />
 				<Contact2 />

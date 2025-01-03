@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Marquee from 'react-fast-marquee'
 
 Resume1.defaultProps = {
 	education: [
@@ -84,7 +85,7 @@ function ResumeCardItem({ date, title, subtitle, precentage }) {
           <p className="text-300 mb-0">{subtitle}</p>
         </div>
         {precentage && (
-          <h3 className="text-linear ms-auto fw-semibold">
+          <h3 className="text-linear- ms-auto fw-semibold">
             {precentage}
             <span className="fs-4 fw-bold">%</span>
           </h3>
@@ -135,11 +136,31 @@ export default function Resume1({ education, experience }) {
           </div>
         </div>
       </div>
-      <div className="scroll-move-right position-relative pb-160 pt-lg-150">
-        <div className="d-flex align-items-center gap-5 wow img-custom-anim-top position-absolute top-50 start-50 translate-middle">
-          <h3 className="stroke fs-150 text-uppercase text-white">Branding . Marketing . User Interface</h3>
-        </div>
-      </div>
+      <Marquee className="carouselTicker carouselTicker-left position-relative z-1">
+  <ul className="carouselTicker__list m-0">
+    <li className="carouselTicker__item mt-6">
+      <h3 className="stroke fs-110 text-uppercase text-white">
+        Full Stack . Development . Solutions
+      </h3>
+    </li>
+    <li className="carouselTicker__item mt-6">
+      <h3 className="stroke fs-110 text-uppercase text-white">
+        Full Stack . Development . Solutions
+      </h3>
+    </li>
+    <li className="carouselTicker__item mt-6">
+      <h3 className="stroke fs-110 text-uppercase text-white">
+        Full Stack . Development . Solutions
+      </h3>
+    </li>
+    <li className="carouselTicker__item mt-6">
+      <h3 className="stroke fs-110 text-uppercase text-white">
+        Full Stack . Development . Solutions
+      </h3>
+    </li>
+  </ul>
+</Marquee>
+
     </section>
   );
 }
