@@ -24,7 +24,7 @@ const swiperOptions = {
 
 const projectData = [
   {
-    imgSrc: 'assets/projects/yoga main.png',
+    imgSrc: 'assets/projects/yoga.png',
     title: 'AMIZH Birth&Yoga - Online Pregnancy Yoga Sessions',
     description: 'Developed the front-end of the Amizh Birth and Yoga website, creating an intuitive and visually appealing platform for women’s wellness services',
     client: 'Conceptual JSC',
@@ -34,34 +34,34 @@ const projectData = [
     githubLink: 'https://github.com/nirmalraaj0275/AmizhBirthandYoga',
   },
   {
-    imgSrc: 'assets/imgs/home-page-2/projects/img-1.png',
-    title: 'Integrate AI into the ecommerce system',
-    description: 'Developed an online learning platform with course management, quizzes, and progress tracking.',
+    imgSrc: 'assets/projects/relation.png',
+    title: 'Relationswork',
+    description: 'Developed a business website for Relationswork with an admin dashboard for managing blog posts and SEO optimization for better search engine ranking..',
     client: 'Conceptual JSC',
-    completionTime: '6 months',
-    technologies: 'Node.js, React, MongoDB, Stripe',
-    WebSiteLink: '#',
+    completionTime: '3 weeks ',
+    technologies: 'Next.js, Firebase,SEO, Blog Management',
+    WebSiteLink: 'https://www.relationswork.in/',
     githubLink: '#',
   },
   {
-    imgSrc: 'assets/imgs/home-page-2/projects/img-1.png',
-    title: 'Integrate AI into the ecommerce system',
-    description: 'Developed an online learning platform with course management, quizzes, and progress tracking.',
+    imgSrc: 'assets/projects/nextone.png',
+    title: 'NextOne Solutions',
+    description: 'Redesigned NextOne Solutions website using Next.js to enhance user experience, improve load times, and ensure mobile responsiveness, aligning with their business goals.',
     client: 'Conceptual JSC',
-    completionTime: '6 months',
-    technologies: 'Node.js, React, MongoDB, Stripe',
-    WebSiteLink: '#',
-    githubLink: '#',
+    completionTime: '1 months',
+    technologies: 'Next.js,Web Design',
+    WebSiteLink: 'https://www.nextonesolutions.in/',
+    githubLink: 'https://github.com/nirmalraaj0275/NextOne_3D',
   },
   {
-    imgSrc: 'assets/imgs/home-page-2/projects/img-1.png',
-    title: 'Integrate AI into the ecommerce system',
-    description: 'Developed an online learning platform with course management, quizzes, and progress tracking.',
+    imgSrc: 'assets/projects/conoide.png',
+    title: 'Cognoid Systems Private Limited,',
+    description: '"Developed the frontend of the Cognoid website using Next.js, focusing on creating a responsive and dynamic user interface. Ensured seamless navigation, fast load times, and an overall enhanced user experience."',
     client: 'Conceptual JSC',
-    completionTime: '6 months',
-    technologies: 'Node.js, React, MongoDB, Stripe',
-    WebSiteLink: '#',
-    githubLink: '#',
+    completionTime: '1 months',
+    technologies: 'Next.js,Web Design',
+    WebSiteLink: 'https://product-cognoid.vercel.app/',
+    githubLink: 'https://github.com/nirmalraaj0275/Product_Cognoid',
   },
   // Add more project data objects here as needed
 ]
@@ -72,7 +72,7 @@ export default function Projects2() {
       <div className="container">
         <div className="rounded-3 border border-1 position-relative overflow-hidden">
           <div className="box-linear-animation position-relative z-1">
-            <div className="p-lg-8 p-md-6 p-3 position-relative z-1">
+            <div className="p-lg-10 p-md-6 p-3 position-relative z-1">
               <div className="d-flex align-items-center">
                 <svg className="text-primary-2 me-2" xmlns="http://www.w3.org/2000/svg" width={5} height={6} viewBox="0 0 5 6" fill="none">
                   <circle cx="2.5" cy={3} r="2.5" fill="#A8FF53" />
@@ -102,7 +102,8 @@ export default function Projects2() {
                               </li> */}
                               <li className="text-dark mb-3 border-bottom pb-3">
                                 <div className="d-flex justify-content-between">
-                                  <p className="text-dark mb-0 text-end">Completion Time</p>
+                                <p className="text-dark mb-0 text-end" >Completion Time</p>
+
                                   <p className="text-300 mb-0 text-end">{project.completionTime}</p>
                                 </div>
                               </li>
