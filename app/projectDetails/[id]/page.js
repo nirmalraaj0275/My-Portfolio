@@ -23,6 +23,8 @@ const page = ({params}) => {
         const filteredData = projectDetails.find((item) => item.id === parseInt(id))
         setDetails(filteredData)
     }, [id])
+     
+    
    
   return (
     <>
