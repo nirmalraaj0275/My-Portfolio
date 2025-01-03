@@ -1,7 +1,7 @@
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
-export default function WorkSingle() {
+export default function WorkSingle({ name}) {
 
 	return (
 		<>
@@ -17,7 +17,7 @@ export default function WorkSingle() {
 											work details
 										</Link>
 										<h3 className="ds-3 mt-3 mb-4 text-dark">
-											Travila - Travel Booking App UI/UX Design
+											{name}
 										</h3>
 										<p className="text-300 fs-5 mb-0">
 											The project involved creating an intuitive and visually appealing user interface, ensuring that users can effortlessly book flights, hotels, and car rentals all within a single app.

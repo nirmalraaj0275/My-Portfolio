@@ -66,7 +66,7 @@ Resume1.defaultProps = {
 		  <h3 className="fw-semibold mb-0 border-bottom border-600 border-3 pb-2 w-100">{title}</h3>
 		</div>
 		<div className="resume-card-body">
-		  {items.map((item, index) => (
+		  {items.map((item : any, index : any)  => (
 			<ResumeCardItem key={index} {...item} />
 		  ))}
 		</div>
