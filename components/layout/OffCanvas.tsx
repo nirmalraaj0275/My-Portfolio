@@ -13,37 +13,37 @@ export default function OffCanvas({ isOffCanvas, handleOffCanvas }: any) {
 					</div>
 					<div className="offCanvas__side-info mb-30">
 						<div className="contact-list mb-30">
-							<p className="fs-6 fw-medium text-200 mb-5">I'm always excited to take on new projects and collaborate with innovative minds.</p>
+							<p className="fs-6 fw-medium text-200 mb-5">As a Full Stack Developer, I’m passionate about creating dynamic, scalable web applications and love collaborating on exciting projects—let’s build something amazing together</p>
 							<div className="mb-3">
 								<span className="text-400 fs-5">Phone Number</span>
-								<p className="mb-0">+1-234-567-8901</p>
+								<p className="mb-0">+91 7397572076</p>
 							</div>
 							<div className="mb-3">
 								<span className="text-400 fs-5">Email</span>
-								<p className="mb-0">contact@william.design</p>
+								<p className="mb-0">nirmalraaj0275@gmail.com</p>
 							</div>
-							<div className="mb-3">
+							{/* <div className="mb-3">
 								<span className="text-400 fs-5">Skype</span>
 								<p className="mb-0">WilliamDesignUX</p>
-							</div>
+							</div> */}
 							<div className="mb-3">
 								<span className="text-400 fs-5">Address</span>
-								<p className="mb-0">0811 Erdman Prairie Road, Joaville, California 90210</p>
+								<p className="mb-0">VLB Engineering, 1014/2 3, Arivozhi Nagar Rd, Arivozi Nagar, Kovaipudur, Coimbatore, Tamil Nadu 641042</p>
 							</div>
 						</div>
 						<div className="contact-list">
 							<p className="text-400 fs-5 mb-2">Social</p>
 							<div className="d-md-flex d-none gap-3">
-								<Link href="/http://facebook.com">
+								{/* <Link href="/http://facebook.com">
 									<i className="ri-facebook-circle-fill fs-18" />
 								</Link>
 								<Link href="/http://twitter.com">
 									<i className="ri-twitter-x-fill fs-18" />
-								</Link>
-								<Link href="/http://linkedin.com">
+								</Link> */}
+								<Link href="https://www.linkedin.com/in/nirmal-raj-r/">
 									<i className="ri-linkedin-fill fs-18" />
 								</Link>
-								<Link href="/http://github.com">
+								<Link href="https://github.com/nirmalraaj0275">
 									<i className="ri-github-fill fs-18" />
 								</Link>
 							</div>
