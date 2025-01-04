@@ -14,8 +14,8 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu,isOffCa
 								<i className="ri-menu-2-line" />
 							</a>
 							<div className="container py-3 px-4">
-								<Link className="navbar-brand d-flex main-logo align-items-center" href="/index-2">
-									<img src="assets/imgs/home-page-2/template/favicon.svg" alt="zelio" />
+								<Link className="navbar-brand d-flex main-logo align-items-center" href="/">
+									<img src="/assets/imgs/home-page-2/template/favicon.svg" alt="zelio" />
 									<span className="fs-4 ms-2">Nirmal.dev</span>
 								</Link>
 								<div className="d-none d-lg-flex">
@@ -25,35 +25,35 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu,isOffCa
 												<Link className="nav-link active" href="#about">About me</Link>
 											</li>
 											<li className="nav-item">
-												<Link className="nav-link" href="#resume">Resume</Link>
+												<Link className="nav-link" href="/#resume">Resume</Link>
 											</li>
 											<li className="nav-item">
-												<Link className="nav-link" href="#services">Services</Link>
+												<Link className="nav-link" href="/#services">Services</Link>
 											</li>
 											<li className="nav-item">
-												<Link className="nav-link" href="#portfolio">Portfolio</Link>
+												<Link className="nav-link" href="/#portfolio">Portfolio</Link>
 											</li>
 											<li className="nav-item">
-												<Link className="nav-link" href="#blog">Blog</Link>
+												<Link className="nav-link" href="/#blog">Blog</Link>
 											</li>
 											<li className="nav-item">
-												<Link className="nav-link" href="#contact">Contact</Link>
+												<Link className="nav-link" href="/#contact">Contact</Link>
 											</li>
 										</ul>
 									</div>
 								</div>
 								<div className="navbar-social d-flex align-items-center pe-5 pe-lg-0 me-5 me-lg-0">
 									<div className="d-md-flex d-none gap-3">
-										<Link href="/http://facebook.com">
+										{/* <Link href="/http://facebook.com">
 											<i className="ri-facebook-circle-fill fs-18" />
-										</Link>
-										<Link href="/http://twitter.com">
+										</Link> */}
+										{/* <Link href="/http://twitter.com">
 											<i className="ri-twitter-x-fill fs-18" />
-										</Link>
-										<Link href="/http://linkedin.com">
+										</Link> */}
+										<Link href="https://www.linkedin.com/in/nirmal-raj-r/" target='_blank'>
 											<i className="ri-linkedin-fill fs-18" />
 										</Link>
-										<Link href="/http://github.com">
+										<Link href="https://github.com/nirmalraaj0275"  target='_blank'>
 											<i className="ri-github-fill fs-18" />
 										</Link>
 									</div>

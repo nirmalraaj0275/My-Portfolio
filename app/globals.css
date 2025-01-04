@@ -78,13 +78,24 @@
   padding: 0;
   margin: 0;
 }
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
 }
-
+/* Set the background GIF to cover the entire screen */
+.background img.bg-d {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Make sure the GIF covers the entire screen */
+  opacity: 0.1;  /* Lower opacity to make the background subtle */
+  z-index: -1;   /* Ensure the GIF is behind the content */
+}
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

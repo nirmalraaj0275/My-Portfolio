@@ -49,7 +49,7 @@ export default function Contact2() {
 								</div>
 								<div className="ps-3 h-100">
 									<span className="text-400 fs-6">Phone Number</span>
-									<h6 className="mb-0">+1-234-567-8901</h6>
+									<h6 className="mb-0">+91 73975 72076</h6>
 								</div>
 								<a href="tel:+1-234-567-8901" className="position-absolute top-0 start-0 w-100 h-100" />
 							</div>
@@ -61,22 +61,22 @@ export default function Contact2() {
 								</div>
 								<div className="ps-3 h-100">
 									<span className="text-400 fs-6">Email</span>
-									<h6 className="mb-0">contact@william.design</h6>
+									<h6 className="mb-0">nirmalraaj0275@gmail.com</h6>
 								</div>
-								<a href="mailto:someone@example.com" className="position-absolute top-0 start-0 w-100 h-100" />
+								<a href="mailto:nirmalraaj0275@gmail.com" className="position-absolute top-0 start-0 w-100 h-100" />
 							</div>
-							<div className="d-flex align-items-center mb-3 position-relative d-inline-flex">
+							{/* <div className="d-flex align-items-center mb-3 position-relative d-inline-flex">
 								<div className="d-inline-block">
 									<div className="icon-flip flex-nowrap icon-shape icon-xxl border border-1 rounded-3 bg-3">
 										<i className="ri-skype-fill text-primary-2 fs-26" />
 									</div>
 								</div>
-								<div className="ps-3 h-100">
+								{/* <div className="ps-3 h-100">
 									<span className="text-400 fs-6">Skype</span>
 									<h6 className="mb-0">WilliamDesignUX</h6>
 								</div>
-								<a href="skype:SKYPENAME?add" className="position-absolute top-0 start-0 w-100 h-100" />
-							</div>
+								<a href="skype:SKYPENAME?add" className="position-absolute top-0 start-0 w-100 h-100" /> */}
+							{/* </div> */} 
 							<div className="d-flex align-items-center mb-3 position-relative d-inline-flex">
 								<div className="d-inline-block">
 									<div className="icon-flip flex-nowrap icon-shape icon-xxl border border-1 rounded-3 bg-3">
@@ -85,9 +85,9 @@ export default function Contact2() {
 								</div>
 								<div className="ps-3 h-100">
 									<span className="text-400 fs-6">Address</span>
-									<h6 className="mb-0">0811 Erdman Prairie, Joaville CA</h6>
+									<h6 className="mb-0">VLB Engineering, 1014/2 3, Arivozhi Nagar Rd, Arivozi Nagar, Kovaipudur, Coimbatore, Tamil Nadu 641042</h6>
 								</div>
-								<a href="https://maps.google.com/maps?q=1st+avenue,New+York" className="position-absolute top-0 start-0 w-100 h-100" />
+								<a href="https://www.google.com/maps/place/Orchids+By+Rakindo/@10.9322043,76.9228368,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba85b93aaaaaaab:0x1a4965e77e7e9cb!8m2!3d10.932199!4d76.9254117!16s%2Fg%2F1thmjfgd?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D" className="position-absolute top-0 start-0 w-100 h-100" />
 							</div>
 						</div>
 					</div>

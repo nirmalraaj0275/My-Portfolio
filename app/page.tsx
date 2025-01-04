@@ -31,7 +31,8 @@ export default function Home() {
 				<Skills2 />
 				{/* <Brands1 /> */}
 				{/* <Testimonials1 /> */}
-				<Blog2 />
+				<br/>
+				{/* <Blog2 /> */}
 				<Contact2 />
 			</Layout>
 		</>

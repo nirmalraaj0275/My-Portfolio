@@ -28,7 +28,7 @@ const dmMono = DM_Mono({
 })
 
 export const metadata: Metadata = {
-	title: "Zelio - Personal Portfolio Template",
+	title: "Nirmal Raj R",
 	description: "Zelio - Personal Portfolio Template",
 }
 

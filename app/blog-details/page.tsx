@@ -228,9 +228,9 @@ export default function BlogDetails() {
 						<div className="container position-relative z-1">
 							<h3 className="ds-3 mt-3 mb-3 text-primary">Get in touch</h3>
 							<span className="fs-5 fw-medium text-200">
-								I'm always excited to take on new projects and collaborate with innovative minds. If you
+								As a Full Stack Developer, I’m passionate about creating dynamic, scalable web applications and
 								<br />
-								have a project in mind or just want to chat about design, feel free to reach out!
+								love collaborating on exciting projects—let’s build something amazing together!
 							</span>
 							<div className="row mt-8">
 								<div className="col-lg-4 d-flex flex-column">
@@ -240,9 +240,9 @@ export default function BlogDetails() {
 										</div>
 										<div className="ps-3">
 											<span className="text-400 fs-5">Phone Number</span>
-											<h6 className="mb-0">+1-234-567-8901</h6>
+											<h6 className="mb-0">+91 73975-72076</h6>
 										</div>
-										<Link href="/tel:+1-234-567-8901" className="position-absolute top-0 start-0 w-100 h-100" />
+										<Link href="/tel:73975-72076" className="position-absolute top-0 start-0 w-100 h-100" />
 									</div>
 									<div className="d-flex align-items-center mb-4 position-relative d-inline-flex">
 										<div className="bg-white icon-flip position-relative icon-shape icon-xxl border-linear-2 border-2 rounded-4">
