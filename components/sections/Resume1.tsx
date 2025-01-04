@@ -99,7 +99,7 @@ export default function Resume1({ education, experience }) {
   return (
     <section
       id="resume"
-      className="section-resume-1 position-relative pt-150 overflow-hidden"
+      className="section-resume-1 position-relative pt-125 overflow-hidden"
       data-background="assets/imgs/projects/projects-1/background.png"
     >
       <div className="container">

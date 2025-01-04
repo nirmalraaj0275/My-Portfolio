@@ -86,16 +86,22 @@ body, html {
   background-color: #000;
 }
 /* Set the background GIF to cover the entire screen */
-.background img.bg-d {
+.background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* Make sure the GIF covers the entire screen */
-  opacity: 0.1;  /* Lower opacity to make the background subtle */
-  z-index: -1;   /* Ensure the GIF is behind the content */
+  z-index: -1; /* Ensure it appears behind other elements */
+  overflow: hidden;
 }
+
+.bg-d {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales to cover the entire section */
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
