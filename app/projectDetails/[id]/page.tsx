@@ -1,11 +1,13 @@
 'use client';
-import WorkSingle from '@/app/work-single/page';
+import WorkSingle from '@/components/work-single/page';
 import React, { useEffect, useState } from 'react';
 
-const Page = ({ params }) => {
+const Page = ({ params }: { params: { id: string } }) => {
     const id = params.id;
-    const [details, setDetails] = useState([]);
-    const [technologies, setTechnologies] = useState([]);
+    const [details, setDetails] = useState<any>(null);
+    const [technologies, setTechnologies] = useState<
+    { title: string; description: string }[]
+  >([]);
 
     const projectDetails = [
         {

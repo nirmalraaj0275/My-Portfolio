@@ -1,85 +1,32 @@
 import Link from "next/link";
-import Marquee from 'react-fast-marquee'
+import Marquee from "react-fast-marquee";
 
-Resume1.defaultProps = {
-	education: [
-	  {
-		date: "2021-2025",
-		title: "BE Computer Science and Engineering ",
-		subtitle: "SNS College of Technology",
-		precentage: "79.9",
-	  },
-	  {
-		date: "2018-2021",
-		title: "Diploma in Mechanical Engineering",
-		subtitle: "CIT Sandwich Polytechnic College",
-		precentage: "81",
-	  },
-	  {
-		date: "2017-2018",
-		title: "Secondary School Leaving Certificate.",
-		subtitle: "Sindhi Vidyalaya Matric Hr. Sec. School",
-		precentage: "83",
-	  },
-	//   {
-	// 	date: "2012-2013",
-	// 	title: "Certification in Graphic Design",
-	// 	subtitle: "Coursera",
-	// 	precentage: "4.8",
-	//   },
-	],
-	experience: [
-	  {
-		date: "Jan 2024 - Present",
-		title: "Full Stack Developer",
-		subtitle: "NextOne Solution",
-	  },
-	  {
-		date: "Jun 2024 - July 2024",
-		title: "Front End Developer",
-		subtitle: "Tech Sac Solution",
-	  },
-	  {
-		date: "May 2024",
-		title: "Frontend Developmemt Internship",
-		subtitle: "Code-Alpha",
-	  },
-	//   {
-	// 	date: "2012 - 2014",
-	// 	title: "Junior UI Designer",
-	// 	subtitle: "Web Solutions team",
-	//   },
-	],
-  };
-  
+// Type definitions for ResumeCard props
+type ResumeCardProps = {
+  title: string;
+  icon: string;
+  items: Array<{
+    date: string;
+    title: string;
+    subtitle?: string;
+    precentage?: string;
+  }>;
+};
 
-  function ResumeCard({ title, icon, items }) {
-	return (
-	  <div className="resume-card p-lg-6 p-4 h-100">
-		<div className="resume-card-header d-flex align-items-end">
-		  <img
-			className="border-linear-1 border-3 pb-2 pe-2"
-			src={icon}
-			alt={`${title} Icon`}
-			style={{ width: "50px", height: "50px" }} // Adjust size here
-		  />
-		  <h3 className="fw-semibold mb-0 border-bottom border-600 border-3 pb-2 w-100">{title}</h3>
-		</div>
-		<div className="resume-card-body">
-		  {items.map((item : any, index : any)  => (
-			<ResumeCardItem key={index} {...item} />
-		  ))}
-		</div>
-	  </div>
-	);
-  }
+// Type definitions for ResumeCardItem props
+type ResumeCardItemProps = {
+  date: string;
+  title: string;
+  subtitle?: string;
+  precentage?: string;
+};
 
-function ResumeCardItem({ date, title, subtitle, precentage }) {
+// ResumeCardItem component
+function ResumeCardItem({ date, title, subtitle, precentage }: ResumeCardItemProps) {
   return (
     <div className="resume-card-item px-4 py-3 mt-5">
       <div className="d-flex align-items-end">
         <div>
-			{/* className="fw-extra-bold text-linear-1 mb-2" */}
           <p className="fw-extra-bold text-green">{date}</p>
           <h5>{title}</h5>
           <p className="text-300 mb-0">{subtitle}</p>
@@ -95,7 +42,38 @@ function ResumeCardItem({ date, title, subtitle, precentage }) {
   );
 }
 
-export default function Resume1({ education, experience }) {
+// ResumeCard component
+function ResumeCard({ title, icon, items }: ResumeCardProps) {
+  return (
+    <div className="resume-card p-lg-6 p-4 h-100">
+      <div className="resume-card-header d-flex align-items-end">
+        <img
+          className="border-linear-1 border-3 pb-2 pe-2"
+          src={icon}
+          alt={`${title} Icon`}
+          style={{ width: "50px", height: "50px" }}
+        />
+        <h3 className="fw-semibold mb-0 border-bottom border-600 border-3 pb-2 w-100">
+          {title}
+        </h3>
+      </div>
+      <div className="resume-card-body">
+        {items.map((item, index) => (
+          <ResumeCardItem key={index} {...item} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Main Resume1 component
+export default function Resume1({
+  education,
+  experience,
+}: {
+  education: ResumeCardProps["items"];
+  experience: ResumeCardProps["items"];
+}) {
   return (
     <section
       id="resume"
@@ -137,31 +115,70 @@ export default function Resume1({ education, experience }) {
         </div>
       </div>
       <Marquee className="carouselTicker carouselTicker-left position-relative z-1">
-  <ul className="carouselTicker__list m-0">
-    <li className="carouselTicker__item mt-6">
-      <h3 className="stroke fs-110 text-uppercase text-white">
-        Full Stack . Development . Solutions
-      </h3>
-    </li>
-    <li className="carouselTicker__item mt-6">
-      <h3 className="stroke fs-110 text-uppercase text-white">
-        Full Stack . Development . Solutions
-      </h3>
-    </li>
-    <li className="carouselTicker__item mt-6">
-      <h3 className="stroke fs-110 text-uppercase text-white">
-        Full Stack . Development . Solutions
-      </h3>
-    </li>
-    <li className="carouselTicker__item mt-6">
-      <h3 className="stroke fs-110 text-uppercase text-white">
-        Full Stack . Development . Solutions
-      </h3>
-    </li>
-  </ul>
-</Marquee>
-
+        <ul className="carouselTicker__list m-0">
+          <li className="carouselTicker__item mt-6">
+            <h3 className="stroke fs-110 text-uppercase text-white">
+              Full Stack . Development . Solutions
+            </h3>
+          </li>
+          <li className="carouselTicker__item mt-6">
+            <h3 className="stroke fs-110 text-uppercase text-white">
+              Full Stack . Development . Solutions
+            </h3>
+          </li>
+          <li className="carouselTicker__item mt-6">
+            <h3 className="stroke fs-110 text-uppercase text-white">
+              Full Stack . Development . Solutions
+            </h3>
+          </li>
+          <li className="carouselTicker__item mt-6">
+            <h3 className="stroke fs-110 text-uppercase text-white">
+              Full Stack . Development . Solutions
+            </h3>
+          </li>
+        </ul>
+      </Marquee>
     </section>
   );
 }
 
+// Default props
+Resume1.defaultProps = {
+  education: [
+    {
+      date: "2021-2025",
+      title: "BE Computer Science and Engineering",
+      subtitle: "SNS College of Technology",
+      precentage: "79.9",
+    },
+    {
+      date: "2018-2021",
+      title: "Diploma in Mechanical Engineering",
+      subtitle: "CIT Sandwich Polytechnic College",
+      precentage: "81",
+    },
+    {
+      date: "2017-2018",
+      title: "Secondary School Leaving Certificate.",
+      subtitle: "Sindhi Vidyalaya Matric Hr. Sec. School",
+      precentage: "83",
+    },
+  ],
+  experience: [
+    {
+      date: "Jan 2024 - Present",
+      title: "Full Stack Developer",
+      subtitle: "NextOne Solution",
+    },
+    {
+      date: "Jun 2024 - July 2024",
+      title: "Front End Developer",
+      subtitle: "Tech Sac Solution",
+    },
+    {
+      date: "May 2024",
+      title: "Frontend Development Internship",
+      subtitle: "Code-Alpha",
+    },
+  ],
+};
