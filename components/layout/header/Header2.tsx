@@ -33,9 +33,9 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu,isOffCa
 											<li className="nav-item">
 												<Link className="nav-link" href="/#portfolio">Portfolio</Link>
 											</li>
-											<li className="nav-item">
+											{/* <li className="nav-item">
 												<Link className="nav-link" href="/#blog">Blog</Link>
-											</li>
+											</li> */}
 											<li className="nav-item">
 												<Link className="nav-link" href="/#contact">Contact</Link>
 											</li>

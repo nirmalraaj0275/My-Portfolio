@@ -85,10 +85,30 @@ export default function Home2() {
           </div>
         </div>
 
-        {/* Fullscreen GIF Background */}
-        <div className="background position-absolute top-0 start-0 w-100 h-100">
-          {/* <img className="bg-d" src="public/assets/projects/gif.gif" alt="zelio" /> */}
-        </div>
+        {/* Fullscreen GIF Background
+        <div 
+          className="background position-absolute top-0 start-0 w-100 h-100" 
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: -1,  // Ensure it appears behind other elements
+          }}
+        >
+          <img 
+            className="bg-d" 
+            src="assets/projects/code.gif" 
+            alt="zelio" 
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover', 
+              opacity: 0.5, // Ensures the image scales without distortion
+            }}
+          />
+        </div> */}
       </section>
     </>
   )

@@ -1,11 +1,32 @@
+import Layout from "@/components/layout/Layout";
+import Link from "next/link";
 
-import Layout from "@/components/layout/Layout"
-import Link from "next/link"
-export default function WorkSingle({ title, description,stdate,compdate,services,web,img,prodesc,technologies}) {
+interface WorkSingleProps {
+  title: string;
+  description: string;
+  stdate: string;
+  compdate: string;
+  services: string;
+  web: string;
+  img: string;
+  prodesc: string;
+  technologies: { title: string; description: string }[];
+}
 
-	return (
-		<>
-<Layout headerStyle={2} footerStyle={2}>
+// The WorkSingle component receives props directly
+export default function WorkSingle({
+  title,
+  description,
+  stdate,
+  compdate,
+  services,
+  web,
+  img,
+  prodesc,
+  technologies,
+}: WorkSingleProps) {
+  return (
+    <Layout headerStyle={2} footerStyle={2}>
       <div>
         <section className="section-work-single section-padding">
           <div className="container">
@@ -32,11 +53,20 @@ export default function WorkSingle({ title, description,stdate,compdate,services
                 </div>
                 <div className="bg-6 px-5 py-3 rounded-2">
                   <p className="text-300 mb-0">Website</p>
-                  <h6>{web}</h6>
+                  <h6>
+                    <a href={web} target="_blank" rel="noopener noreferrer">
+                      {web}
+                    </a>
+                  </h6>
                 </div>
               </div>
 
-              <img src={img} alt={title} className="img-fluid" />
+              <img
+                src={img}
+                alt={title}
+                className="img-fluid"
+                style={{ maxWidth: "100%", height: "auto" }}
+              />
 
               <div className="col-lg-8 mx-lg-auto mt-8">
                 <h5 className="fs-5 fw-medium mt-4">Description</h5>
@@ -47,7 +77,10 @@ export default function WorkSingle({ title, description,stdate,compdate,services
                   {technologies.map((tech, index) => (
                     <li key={index}>
                       <p className="text-dark fw-bold">
-                        {tech.title}: <span className="text-300 fw-medium">{tech.description}</span>
+                        {tech.title}:{" "}
+                        <span className="text-300 fw-medium">
+                          {tech.description}
+                        </span>
                       </p>
                     </li>
                   ))}
@@ -58,7 +91,5 @@ export default function WorkSingle({ title, description,stdate,compdate,services
         </section>
       </div>
     </Layout>
-
-		</>
-	)
+  );
 }

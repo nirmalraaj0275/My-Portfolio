@@ -1989,7 +1989,7 @@ textarea {
 }
 
 .text-linear-4 {
-  background: var(--tc-linear-4);
+  background: yellow;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
