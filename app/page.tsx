@@ -18,6 +18,8 @@ import Resume1 from "@/components/sections/Resume1"
 // import Testimonials1 from "@/components/sections/Testimonials1"
 import Link from "next/link"
 import Home2 from "@/components/sections/Home2"
+
+
 export default function Home() {
 
 	return (
