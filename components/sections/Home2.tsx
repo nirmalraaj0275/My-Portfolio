@@ -23,19 +23,19 @@ export default function Home2() {
                       &lt;span&gt;
                       <div className="text-dark">
                         <div className="typewriter">
-                          <h1 className="fs-6 fw-medium">Hey, I’m Nirmal Raj R</h1>
+                          <h1 className="fs-6 fw-medium" >Hey, I’m Nirmal Raj R</h1>
                         </div>
                       </div>
                       &lt;/span&gt;
                     </div>
                     <h1 className="fs-50 my-3"> <span className="text-linear-4">{'{'}Full Stack{'}'}</span>Web Developer  | Frontend & Backend Enthusiast<span className="flicker">_</span></h1>
-                    <p className="mb-6 text-secondary-2"> &lt;p&gt;
-                      <span className="text-dark">With expertise in modern web technologies such as</span> 
-                      <span className="text-secondary-2">MongoDB</span>,
+                    <p className="mb-6 text-secondary-2" > &lt;p&gt;
+                      <span className="fs-6 mb-0 text-dark">With expertise in modern web technologies such as</span> 
+                      <span className="text-secondary-2"> MongoDB</span>,
                       <span className="text-secondary-2"> Express.js</span>,
                       <span className="text-secondary-2"> React</span>, and 
                       <span className="text-secondary-2"> Node.js</span>
-                      <span className="text-dark">, I create scalable and user-friendly web applications that deliver innovative solutions.</span>&lt;/p&gt;
+                      <span className="fs-6 mb-0 text-dark">, I create scalable and user-friendly web applications that deliver innovative solutions.</span>&lt;/p&gt;
                     </p>
                     <div className="row">
                       <div className="col-7">
