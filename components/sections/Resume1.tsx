@@ -1,39 +1,26 @@
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
-// Type definitions for ResumeCard props
-type ResumeCardProps = {
-  title: string;
-  icon: string;
-  items: Array<{
-    date: string;
-    title: string;
-    subtitle?: string;
-    precentage?: string;
-  }>;
-};
-
-// Type definitions for ResumeCardItem props
-type ResumeCardItemProps = {
+type ResumeItem = {
   date: string;
   title: string;
   subtitle?: string;
-  precentage?: string;
+  percentage?: string;
 };
 
-// ResumeCardItem component
-function ResumeCardItem({ date, title, subtitle, precentage }: ResumeCardItemProps) {
+// ResumeCardItem component for individual resume entries
+function ResumeCardItem({ date, title, subtitle, percentage }: ResumeItem) {
   return (
     <div className="resume-card-item px-4 py-3 mt-5">
       <div className="d-flex align-items-end">
         <div>
-          <p className="fw-extra-bold text-green">{date}</p>
+          <p className="fw-bold text-green">{date}</p>
           <h5>{title}</h5>
           <p className="text-300 mb-0">{subtitle}</p>
         </div>
-        {precentage && (
+        {percentage && (
           <h3 className="text-linear- ms-auto fw-semibold">
-            {precentage}
+            {percentage}
             <span className="fs-4 fw-bold">%</span>
           </h3>
         )}
@@ -42,22 +29,28 @@ function ResumeCardItem({ date, title, subtitle, precentage }: ResumeCardItemPro
   );
 }
 
-// ResumeCard component
-function ResumeCard({ title, icon, items }: ResumeCardProps) {
+// ResumeCard component for categorized sections
+function ResumeCard({
+  title,
+  icon,
+  items,
+}: {
+  title: string;
+  icon: string;
+  items: ResumeItem[];
+}) {
   return (
-    <div className="resume-card p-lg-6 p-4 h-100">
-      <div className="resume-card-header d-flex align-items-end">
+    <div className="resume-card rounded-3 p-4 h-100 hover-up">
+      <div className="resume-card-header d-flex align-items-center">
         <img
-          className="border-linear-1 border-3 pb-2 pe-2"
           src={icon}
           alt={`${title} Icon`}
+          className="border-3 pb-2 pe-2"
           style={{ width: "50px", height: "50px" }}
         />
-        <h3 className="fw-semibold mb-0 border-bottom border-600 border-3 pb-2 w-100">
-          {title}
-        </h3>
+        <h3 className="fw-semibold ms-3 mb-0">{title}</h3>
       </div>
-      <div className="resume-card-body">
+      <div className="resume-card-body mt-4">
         {items.map((item, index) => (
           <ResumeCardItem key={index} {...item} />
         ))}
@@ -71,8 +64,8 @@ export default function Resume1({
   education,
   experience,
 }: {
-  education: ResumeCardProps["items"];
-  experience: ResumeCardProps["items"];
+  education: ResumeItem[];
+  experience: ResumeItem[];
 }) {
   return (
     <section
@@ -81,31 +74,21 @@ export default function Resume1({
       data-background="assets/imgs/projects/projects-1/background.png"
     >
       <div className="container">
-        <div className="row align-items-end">
-          <div className="col-lg-7 me-auto">
-            <h3 className="ds-3 mt-3 mb-3 text-bold">My Resume</h3>
-            <span className="fs-5 fw-medium text-200">
-              I believe that working hard and trying to learn every day will
-              <br />
-              make me improve in satisfying my customers.
-            </span>
-          </div>
-          <div className="col-lg-auto">
-            <Link href="/#contact" className="btn btn-gradient mt-lg-0 mt-5 ms-lg-auto ">
-              Get in touch
-              <i className="ri-arrow-right-up-line" />
-            </Link>
-          </div>
+        <div className="text-center mb-5">
+          <h3 className="fw-bold">My Resume</h3>
+          <p className="fs-5 text-300">
+            I believe in continuous learning and hard work to achieve excellence in my field.
+          </p>
         </div>
-        <div className="row mt-6">
-          <div className="col-lg-6 col-12">
+        <div className="row g-4">
+          <div className="col-lg-6 col-md-6">
             <ResumeCard
               title="Education"
               icon="/assets/imgs/resume/resume-1/graduation-cap.png"
               items={education}
             />
           </div>
-          <div className="col-lg-6 col-12">
+          <div className="col-lg-6 col-md-6">
             <ResumeCard
               title="Experience"
               icon="/assets/imgs/resume/resume-1/experiment.png"
@@ -114,26 +97,16 @@ export default function Resume1({
           </div>
         </div>
       </div>
-      <Marquee className="carouselTicker carouselTicker-left position-relative z-1">
+      <Marquee className="carouselTicker position-relative z-1 mt-5">
         <ul className="carouselTicker__list m-0">
-          <li className="carouselTicker__item mt-6">
+          <li className="carouselTicker__item">
             <h3 className="stroke fs-110 text-uppercase text-white">
               Full Stack . Development . Solutions
             </h3>
           </li>
-          <li className="carouselTicker__item mt-6">
+          <li className="carouselTicker__item">
             <h3 className="stroke fs-110 text-uppercase text-white">
-              Full Stack . Development . Solutions
-            </h3>
-          </li>
-          <li className="carouselTicker__item mt-6">
-            <h3 className="stroke fs-110 text-uppercase text-white">
-              Full Stack . Development . Solutions
-            </h3>
-          </li>
-          <li className="carouselTicker__item mt-6">
-            <h3 className="stroke fs-110 text-uppercase text-white">
-              Full Stack . Development . Solutions
+              Continuous Learning . Innovative Design . Collaboration
             </h3>
           </li>
         </ul>
@@ -142,26 +115,26 @@ export default function Resume1({
   );
 }
 
-// Default props
+// Default Props
 Resume1.defaultProps = {
   education: [
     {
       date: "2021-2025",
       title: "BE Computer Science and Engineering",
       subtitle: "SNS College of Technology",
-      precentage: "79.9",
+      percentage: "79.9",
     },
     {
       date: "2018-2021",
       title: "Diploma in Mechanical Engineering",
       subtitle: "CIT Sandwich Polytechnic College",
-      precentage: "81",
+      percentage: "81",
     },
     {
       date: "2017-2018",
-      title: "Secondary School Leaving Certificate.",
+      title: "Secondary School Leaving Certificate",
       subtitle: "Sindhi Vidyalaya Matric Hr. Sec. School",
-      precentage: "83",
+      percentage: "83",
     },
   ],
   experience: [
@@ -171,7 +144,7 @@ Resume1.defaultProps = {
       subtitle: "NextOne Solution",
     },
     {
-      date: "Jun 2024 - July 2024",
+      date: "Jun 2024 - Jul 2024",
       title: "Front End Developer",
       subtitle: "Tech Sac Solution",
     },
