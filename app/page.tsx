@@ -15,7 +15,7 @@ import Skills2 from "@/components/sections/Skills2"
 import Static1 from "@/components/sections/Static1"
 import Static2 from "@/components/sections/Static2"
 import Resume1 from "@/components/sections/Resume1"
-// import Testimonials1 from "@/components/sections/Testimonials1"
+import Testimonials1 from "@/components/sections/Testimonials1"
 import Link from "next/link"
 import Home2 from "@/components/sections/Home2"
 
@@ -33,7 +33,7 @@ export default function Home() {
 				<Resume1 />
 				<Skills2 />
 				<Brands1 />
-				{/* <Testimonials1 /> */}
+				<Testimonials1 />
 				<br/>
 				{/* <Blog2 /> */}
 				<Contact2 />
