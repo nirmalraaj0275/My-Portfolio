@@ -32,7 +32,7 @@ export default function Home() {
 				<br/>
 				<Resume1 />
 				<Skills2 />
-				{/* <Brands1 /> */}
+				<Brands1 />
 				{/* <Testimonials1 /> */}
 				<br/>
 				{/* <Blog2 /> */}
